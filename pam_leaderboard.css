@@ -1,0 +1,93 @@
+:root {
+  --brand: #003a7a;
+  --bg: #f5f8fc;
+  --card: #ffffff;
+  --header: #0b4d99;
+  --stamp-col: #e9f0fa;
+  --stamp-col-strong: #d7e5fb;
+  --table-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  --row-size: 44px;
+  --radius: 16px;
+}
+
+/* Page background and layout */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: #1c2a39;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.wrap {
+  width: min(1100px, 95vw);
+}
+
+h1 {
+  color: var(--brand);
+  margin-bottom: 24px;
+}
+
+/* Card container */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--table-shadow);
+  overflow: hidden;
+}
+
+/* Table structure */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 920px;
+}
+
+thead th {
+  background: var(--brand);
+  color: #fff;
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 700;
+}
+
+tbody td {
+  height: var(--row-size);
+  padding: 10px 16px;
+  border-bottom: 1px solid #eef3fb;
+}
+
+/* Highlight the total stamps column */
+tbody td.total {
+  background: var(--stamp-col);
+  font-weight: 800;
+}
+
+tbody tr:hover td.total {
+  background: var(--stamp-col-strong);
+}
+
+/* Special column styling */
+tbody td.rank {
+  text-align: center;
+  font-weight: 700;
+}
+
+tbody td.traveler {
+  font-weight: 600;
+}
+
+/* Icon & text handling */
+.cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cell img {
+  height: 24px;
+  width: 24px;
+}
